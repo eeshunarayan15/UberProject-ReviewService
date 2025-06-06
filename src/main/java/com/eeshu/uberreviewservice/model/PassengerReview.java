@@ -1,5 +1,6 @@
 package com.eeshu.uberreviewservice.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.Getter;
@@ -10,5 +11,8 @@ import lombok.Setter;
 @Getter
 @PrimaryKeyJoinColumn(name = "passenger_review_id")
 public class PassengerReview extends Review{
-    private String passengerReviewComment;
+//    @Column(nullable = false)
+    private String passengerReviewContent;
+//    @Column(nullable = false)
+//    private  String passengerRating;
 }

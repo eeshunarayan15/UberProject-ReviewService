@@ -13,11 +13,13 @@ public  abstract  class BaseModel {
     //this class is abstract we don't want any to make object of this class
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected long id;
+
     @Column(nullable = false)
-    @CreatedDate
+    @CreatedDate//this annotation tells spring that only handle it for object creation
     protected Date createdAt;
+
     @Column(nullable = false)
     @LastModifiedDate
     @Temporal(TemporalType.TIMESTAMP)
