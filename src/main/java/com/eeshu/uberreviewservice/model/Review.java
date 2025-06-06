@@ -16,11 +16,13 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 @Table(name = "bookingreview")
+@Inheritance(strategy = InheritanceType.JOINED )
 public class Review extends BaseModel {
 
 @Column(nullable = false)
     private  String content;
     private double rating;
+
 
 
 }

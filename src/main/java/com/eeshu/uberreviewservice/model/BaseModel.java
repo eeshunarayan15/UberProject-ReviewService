@@ -6,11 +6,14 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
-@MappedSuperclass
+@MappedSuperclass//This annotaiton handles the inheritance in spiring data jpa
+
 @EntityListeners(AuditingEntityListener.class)
 public  abstract  class BaseModel {
+    //this class is abstract we don't want any to make object of this class
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     protected long id;
     @Column(nullable = false)
     @CreatedDate
