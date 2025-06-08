@@ -29,7 +29,7 @@ public class Booking extends BaseModel{
     private Date endTime;
 
     private long totalDistance;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private  Driver driver;
     @ManyToOne
     private Passenger passenger;
